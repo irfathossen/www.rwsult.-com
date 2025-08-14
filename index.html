@@ -1,0 +1,83 @@
+<div id="container">
+  <!-- Login Form -->
+  <div id="loginSection" class="login-section">
+    <h1>Learn with Irfat</h1>
+    <h2>Result Login</h2>
+    <form id="resultForm">
+      <label for="roll">রোল নাম্বার</label>
+      <input type="text" id="roll" name="roll" placeholder="আপনার রোল নাম্বার দিন" required />
+      <div id="rollError" class="error">রোল নাম্বার অবশ্যই দিতে হবে</div>
+
+      <label for="classSelect">ক্লাস</label>
+      <select id="classSelect" name="classSelect" required>
+        <option value="" disabled selected>আপনার ক্লাস সিলেক্ট করুন</option>
+        <option value="class6">৬ষ্ঠ</option>
+        <option value="class7">৭ম</option>
+        <option value="class8">৮ম</option>
+        <option value="class9">৯ম</option>
+        <option value="class10">২য়</option>
+      </select>
+      <div id="classError" class="error">একটা ক্লাস সিলেক্ট করুন</div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Result Display -->
+  <div id="resultSection" class="result-section" style="display:none;">
+    <h1>Learn with Irfat</h1>
+    <h2>Weekly / Monthly Result</h2>
+
+    <div class="student-details">
+      <p><span class="label">Name</span> : <span id="studentName" class="line"></span></p>
+      <p><span class="label">Father's Name</span> : <span id="fatherName" class="line"></span></p>
+      <p><span class="label">Institute</span> : Learn with Irfat</p>
+      <p><span class="label">Roll Number</span> : <span id="rollNumber" class="line"></span></p>
+      <p><span class="label">Class</span> : <span id="className" class="line"></span></p>
+      <p><span class="label">Gender</span> : <span id="gender" class="line"></span></p>
+      <p><span class="label">Date of Birth</span> : <span id="dob" class="line"></span></p>
+    </div>
+
+    <h3 class="mark-title">MARK SHEET</h3>
+    <table class="mark-sheet">
+      <thead>
+        <tr>
+          <th>Weeks</th>
+          <th>Mark</th>
+          <th>GPA</th>
+          <th>Total GPA (4 weeks)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1st Week</td>
+          <td id="mark1"></td>
+          <td id="gpa1"></td>
+          <td rowspan="4" id="totalGPA" class="total-gpa"></td>
+        </tr>
+        <tr>
+          <td>2nd Week</td>
+          <td id="mark2"></td>
+          <td id="gpa2"></td>
+        </tr>
+        <tr>
+          <td>3rd Week</td>
+          <td id="mark3"></td>
+          <td id="gpa3"></td>
+        </tr>
+        <tr>
+          <td>4th Week</td>
+          <td id="mark4"></td>
+          <td id="gpa4"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="signatures">
+      <div class="left-sign">Controller of Examination</div>
+      <div class="right-sign">CEO of the Institute</div>
+    </div>
+
+    <button id="backBtn">Back to Login</button>
+  </div>
+</div>
